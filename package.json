@@ -1,7 +1,7 @@
 {
   "name": "@react-pdf/png-js",
   "description": "A PNG decoder in CoffeeScript",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "main": "dist/png-js.cjs.js",
   "module": "dist/png-js.es.js",
   "browser": {
@@ -9,9 +9,9 @@
     "./dist/png-js.cjs.js": "./dist/png-js.browser.cjs.js"
   },
   "author": {
-      "name": "Devon Govett",
-      "email": "devongovett@gmail.com",
-      "url": "http://badassjs.com/"
+    "name": "Devon Govett",
+    "email": "devongovett@gmail.com",
+    "url": "http://badassjs.com/"
   },
   "scripts": {
     "build": "rollup -c",
