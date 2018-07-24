@@ -8,6 +8,7 @@
     "./dist/png-js.es.js": "./dist/png-js.browser.es.js",
     "./dist/png-js.cjs.js": "./dist/png-js.browser.cjs.js"
   },
+  "react-native": "./dist/png-js.native.cjs.js",
   "author": {
     "name": "Devon Govett",
     "email": "devongovett@gmail.com",
@@ -40,5 +41,8 @@
       "path": "./dist/png-js.browser.cjs.min.js",
       "maxSize": "2kB"
     }
-  ]
+  ],
+  "dependencies": {
+    "react-zlib-js": "^1.0.4"
+  }
 }
