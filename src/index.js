@@ -140,7 +140,7 @@ class PNG {
             }
           })();
 
-          this.imgData = new Buffer(this.imgData);
+          this.imgData = Buffer.from(this.imgData);
           return;
           break;
 
@@ -185,7 +185,7 @@ class PNG {
       const pixelBytes = this.pixelBitlength / 8;
       const scanlineLength = pixelBytes * this.width;
 
-      const pixels = new Buffer(scanlineLength * this.height);
+      const pixels = Buffer.alloc(scanlineLength * this.height);
       const {length} = data;
       let row = 0;
       let pos = 0;
@@ -288,7 +288,7 @@ class PNG {
   decodePalette() {
     const {palette} = this;
     const transparency = this.transparency.indexed || [];
-    const ret = new Buffer(transparency.length + palette.length);
+    const ret = Buffer.alloc(transparency.length + palette.length);
     let pos = 0;
     const {length} = palette;
     let c = 0;
@@ -361,7 +361,7 @@ class PNG {
   }
 
   decode(fn) {
-    const ret = new Buffer(this.width * this.height * 4);
+    const ret = Buffer.alloc(this.width * this.height * 4);
     return this.decodePixels(pixels => {
       this.copyToImageData(ret, pixels);
       return fn(ret);
